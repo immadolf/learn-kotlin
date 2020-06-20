@@ -25,6 +25,8 @@ fun main(args: Array<String>) {
     println(extensionTest.multiply(1, 2))
 
     myPrint(BB()) // a
+    println("----------")
+    CC().foo() //member
 }
 
 // 扩展函数的解析是静态的
@@ -42,4 +44,30 @@ fun BB.a() = "b"
 
 fun myPrint(aa: AA) {
     println(aa.a())
+}
+
+class CC {
+    fun foo() {
+        println("member")
+    }
+}
+
+// 扩展函数**无法**覆盖类中已有的函数
+fun CC.foo() {
+    println("member2")
+}
+
+// 扩展函数**可以**重载类中已有的函数
+fun CC.foo(i: Int) {
+    println("member2")
+}
+
+
+// 可以对可空类型进行扩展
+fun Any?.toString(): String {
+    if (null == this) {
+        return "null"
+    }
+
+    return this.toString()
 }
