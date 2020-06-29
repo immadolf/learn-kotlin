@@ -14,7 +14,7 @@ public class HelloJava2 {
 
         //无法通过new关键字来创建kotlin编译器自动生成的以kt结尾的类的实例
         //因为在生成的字节码中没有不带参数的构造方法（即默认构造方法）
-        HelloKotlin2Kt helloKotlin2Kt = new HelloKotlin2Kt();
+        //HelloKotlin2Kt helloKotlin2Kt = new HelloKotlin2Kt();
     }
 
 }
