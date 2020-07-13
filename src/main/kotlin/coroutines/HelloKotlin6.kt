@@ -22,6 +22,7 @@ import kotlinx.coroutines.runBlocking
 
 //block: suspend CoroutineScope.() -> Unit  这样的声明方式，是说明block函数需要一个CoroutineScope对象作为参数，更准确的说是作为上下文对象this
 //相当于block: suspend (CoroutineScope) -> Unit
+//疑问：runBlocking会阻塞线程，那为什么launch中输出的线程还是main线程？？？
 fun main() = runBlocking {
     //注意这里不带GlobalScope
     //完整的写法是这样，带上this，这个this指代的是runBlocking函数创建的scope
