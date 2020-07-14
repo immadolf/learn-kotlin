@@ -1,6 +1,7 @@
 package coroutines4
 
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.runBlocking
 
 /**
@@ -20,6 +21,10 @@ fun main() {
         //这里实际上需要的是Job.Key,也就是Job的伴生对象
         val job = coroutineContext[Job]
         println(job)
+        //job不为空时以下写法等价
+        println(coroutineContext.isActive)
+        println(coroutineContext[Job]?.isActive)
+        println(job?.isActive)
     }
     //可以用类名代替伴生对象,从反编译的结果可以看出是编译器做了手脚，它会把这里的A替换成A.key
     //虽然这样写很方便，但是对于阅读者来说又造成了一定的困扰，kotlin是不是过度追求简洁了？把很多细节都隐藏在编译器里，这样真的好吗？
