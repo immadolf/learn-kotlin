@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
             println("a = 2")
             20
         }
-        3,4,5 -> {
+        3, 4, 5 -> {
             println("a = 3 or 4 or 5")
             30
         }

@@ -10,7 +10,7 @@ import kotlin.reflect.full.createInstance
  * @since
  */
 class MyTestClass13 {
-    var name:String ="aaaa"
+    var name: String = "aaaa"
 }
 
 var test = "test"
@@ -27,5 +27,5 @@ fun main() {
     //属性引用与反射
     val kClass = MyTestClass13::class
     val name = MyTestClass13::name
-    name.set(kClass.createInstance(),"abcdefg")
+    name.set(kClass.createInstance(), "abcdefg")
 }

@@ -25,7 +25,7 @@ class Apple : Fruit() {
     }
 }
 
-open class Orange: Fruit() {
+open class Orange : Fruit() {
     // 可以用final再次标记从父类继承的方法
     final override fun name() {
         println("orange")
@@ -33,7 +33,7 @@ open class Orange: Fruit() {
 }
 
 fun main() {
-    var apple =  Apple()
+    var apple = Apple()
     apple.name()
     apple.expirationDate()
 }

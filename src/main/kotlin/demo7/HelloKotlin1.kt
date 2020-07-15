@@ -51,5 +51,4 @@ fun main() {
     map.mapValues { (key, value): Map.Entry<String, String> -> "${value} world" }.forEach { println(it) }
 
 
-
 }

@@ -19,7 +19,7 @@ object MyObject {
     fun method() = "hello world"
 }
 
-object MyObject2:WindowListener {
+object MyObject2 : WindowListener {
     override fun windowDeiconified(e: WindowEvent?) {
         TODO("Not yet implemented")
     }

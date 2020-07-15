@@ -47,5 +47,7 @@ class MyClass7
 // 因此在所生成的Java字节码当中，就会存在多个可能的位置来产生相应的注解，若想精确指定如何来生成注解，那么可以使用注解的使用处目标方式来实现
 // 举例来说，在kotlin的一个属性上标记注解，在生成的字节码中可以出现在字段上，也可以出现在对应的getter方法上
 
-class MyClass8(@field:MyAnnotation val arg1: String,
-               @get:MyAnnotation val arg2: String)
+class MyClass8(
+    @field:MyAnnotation val arg1: String,
+    @get:MyAnnotation val arg2: String
+)

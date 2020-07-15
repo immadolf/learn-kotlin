@@ -19,6 +19,7 @@ fun main() = runBlocking {
         println("22222222")
     }
 }
+
 private suspend fun failureFun(): Int = coroutineScope {
     val value1 = async {
         try {
