@@ -28,3 +28,19 @@ fun main() {
 
     println("world")
 }
+
+/*
+后面很多例子的运行结果看起来像是会先执行launch中的代码块直到挂起再跑去执行外部的代码，
+这个例子说明了协程的确是后台运行的，即不是先执行launch的代码直到挂起再去执行后面的代码。
+fun main() {
+    runBlocking {
+        launch {
+            for (i in 1..100000) {
+                println(i)
+            }
+        }
+        println("end")
+    }
+}
+
+ */
